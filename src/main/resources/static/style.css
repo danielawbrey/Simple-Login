@@ -1,17 +1,31 @@
 body {
-  padding-top: 150px;
-  padding-bottom: 150px;
   background-color: black;
-  margin: auto;
 }
 
 #grid {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   background-color: linen;
   display: table;
   width: 90%;
   margin: auto;
+}
+
+#column {
+  display: table-column;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+#left {
+  float: left;
+  width: 75%;
+}
+
+#right {
+  float: left;
+  width: 25%;
 }
 
 #page {
@@ -33,45 +47,12 @@ a {
   color: black;
 }
 
-#column {
-  display: table-column;
-  width: 50%;
-  float: left;
-  text-align: center;
-}
-
-#user, #pass, #user-reg, #pass-reg {
-  display: table-row;
-  width: 100%;
-}
-
-#left, #right {
-  display: table-column;
-}
-
-#left {
-  float: left;
-  width: 75%;
-}
-
-#right {
-  float: left;
-  width: 25%;
-}
-
-#loginButton {
-  margin-right: 5px;
-  margin-left: 5px;
-  display: table-row;
-  line-height: 46px;
-  width: 100%;
-}
-
 #submitButton {
-  margin-top: 20px;
-  display: block;
-  line-height: 46px;
-  width: 20%;
+  display: table-row;
+  line-height: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  width: 80%;
 }
 
 input {
@@ -82,14 +63,16 @@ input {
   width: 100%;
 }
 
-#loginForm {
-  padding-top: 10px;
-  padding-bottom: 10px;
+#login-form {
+  display: table-column;
+  float: left;
+  text-align: center;
   margin: auto;
-  width: 90%;
+  padding: 15px;
+  width: 80%;
 }
 
-#loginRegistry {
+#registration-form {
   display: table;
   background-color: linen;
   padding: 20px;
