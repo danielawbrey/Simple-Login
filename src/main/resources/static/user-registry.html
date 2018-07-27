@@ -4,32 +4,39 @@
   <meta charset="UTF-8">
   <title>User Registry</title>
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="RegistryController.js"></script>
 </head>
 <body>
-  <form id = "registration-form">
 
-    <div id = "page">
-      <br>
-      <h3> Create your account </h3>
+<div id="page">
 
-      <h4> Enter a username: </h4>
-      <input type = "text" name = "user-reg" placeholder="Username">
+  <div id="page-header">
+    <h3> Create your account </h3>
+  </div>
 
-      <h4> Enter a password: </h4>
-      <input type = "text" name = "pass-reg" placeholder="Password">
+  <form id="registration-form">
 
-      <h4> Enter your first name: </h4>
-      <input type = "text" name = "fn-reg" placeholder="First Name">
+    <h4> Enter a username: </h4>
+    <input type="text" id="user-reg" name="user-reg" placeholder="Username">
 
-      <h4> Enter your last name: </h4>
-      <input type = "text" name = "ln-reg" placeholder="Last Name">
+    <h4> Enter a password: </h4>
+    <input type="password" id="pass-reg" name="pass-reg" placeholder="Password">
 
-      <h4> Enter email: </h4>
-      <input type = "text" name = "email-reg" placeholder="email@email.com">
+    <h4> Confirm password: </h4>
+    <input type="password" id="pass-reg-conf" name="pass-reg" placeholder="Password">
 
-      <button id = "submitButton" onclick=""> Submit </button>
-    </div>
+    <h4> Enter your first name: </h4>
+    <input type="text" id="fn-reg" name="fn-reg" placeholder="First Name">
 
+    <h4> Enter your last name: </h4>
+    <input type="text" id="ln-reg" name="ln-reg" placeholder="Last Name">
+
+    <h4> Enter email: </h4>
+    <input type="email" id="email-reg" name="email-reg" placeholder="email@email.com">
   </form>
+
+  <button type="submit" id="submit-button" onclick="getFormData();"> Submit </button>
+
+</div>
 </body>
 </html>

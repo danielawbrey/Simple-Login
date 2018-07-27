@@ -32,8 +32,15 @@ body {
   padding-top: 4%;
   padding-bottom: 4%;
   background-color: linen;
-  display: table;
-  width: 75%;
+  width: 80%;
+  margin: auto;
+}
+
+#page-header {
+  text-align: center;
+}
+
+#footer {
   margin: auto;
 }
 
@@ -47,12 +54,15 @@ a {
   color: black;
 }
 
-#submitButton {
-  display: table-row;
+#submit-button {
+  width: 868px;
   line-height: 20px;
   padding-top: 1px;
   padding-bottom: 1px;
-  width: 80%;
+  display: block;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 input {
@@ -63,19 +73,28 @@ input {
   width: 100%;
 }
 
+#login-button {
+  display: table-row;
+  line-height: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  width: 490px;
+}
+
 #login-form {
   display: table-column;
   float: left;
   text-align: center;
   margin: auto;
-  padding: 15px;
+  padding-left: 60px;
   width: 80%;
 }
 
 #registration-form {
   display: table;
   background-color: linen;
-  padding: 20px;
+  text-align: left;
   margin: auto;
-  width: 90%;
+  padding: 20px;
+  width: 80%;
 }
