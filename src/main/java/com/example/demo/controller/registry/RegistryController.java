@@ -16,7 +16,10 @@ public class RegistryController {
     @GetMapping
     public String home() { return "user-registry.html"; }
 
-    @PostMapping("/user")
-    @ResponseBody
-    public User register(@RequestBody User user) { return registryService.register(user); }
+    @PostMapping("/user/{username}/{password}/{firstname}/{lastname}/{email}")
+    public boolean register(@PathVariable String username, @PathVariable String password,
+                            @PathVariable String firstname, @PathVariable String lastname,
+                            @PathVariable String email) {
+        return registryService.register(username, password, firstname, lastname, email);
+    }
 }

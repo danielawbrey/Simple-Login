@@ -4,17 +4,22 @@ import com.example.demo.User;
 import com.example.demo.dao.RegistryDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Service
-@RequestMapping("/register")
 public class RegistryServiceImpl implements RegistryService {
 
     @Autowired
     RegistryDAO registryDAO;
 
-    @PutMapping("/user")
-    public User register(@RequestBody User user) { return registryDAO.register(user); }
+    @Override
+    public boolean register(String username, String password, String firstname,
+                            String lastname, String email) {
+        return registryDAO.register(username, password, firstname, lastname, email);
+    }
+
+    @Override
+    public boolean verify(String username, String password) {
+        return registryDAO.verify(username, password);
+    }
 }

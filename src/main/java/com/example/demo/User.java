@@ -1,25 +1,45 @@
 package com.example.demo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class User {
+@Entity
+@Table(name = "INFO", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "ID"),
+        @UniqueConstraint(columnNames = "USERNAME"),
+        @UniqueConstraint(columnNames = "EMAIL")
+})
 
-    @NotNull
-    @Size(min=2, max=30)
+public class User {
+    @Column(name = "id", unique = true, nullable = false, length = 100)
+    private int id;
+    @Column(name = "username", unique = true, nullable = false, length = 100)
     private String username;
-    @NotNull
-    @Size(min=2, max=30)
+    @Column(name = "pass", nullable = false, length = 100)
     private String password;
-    @NotNull
-    @Size(min=2, max=30)
+    @Column(name = "firstname", nullable = false, length = 100)
     private String firstName;
-    @NotNull
-    @Size(min=30)
+    @Column(name = "lastname", nullable = false, length = 100)
     private String lastName;
-    @NotNull
-    @Size(min=7)
+    @Column(name = "email", unique = true, nullable = false, length = 100)
     private String email;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public int getId() { return this.id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getUserName() {
         return this.username;
