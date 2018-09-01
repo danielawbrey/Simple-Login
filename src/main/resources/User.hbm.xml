@@ -2,10 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.example.demo.User" table="INFO" catalog="UserDB">
+    <class name="com.example.demo.objects.User" table="INFO">
 
-        <id name="Id" type="integer">
-            <column name="id" />
+        <id name="Id" type="integer" column="id" >
             <generator class="identity" />
         </id>
 
@@ -14,19 +13,19 @@
         </property>
 
         <property name="password" type="string">
-            <column name="pass" length="100" not-null="true" unique="true" />
+            <column name="pass" length="100" not-null="true"/>
         </property>
 
         <property name="firstName" type = "string">
-            <column name="firstname"  not-null="true" unique="true" />
+            <column name="firstname" length="100"  not-null="true"/>
         </property>
 
         <property name="lastName" type="string">
-            <column name="lastname" length="100" not-null="true" unique="true" />
+            <column name="lastname" length="100" not-null="true"/>
         </property>
 
         <property name="email" type="string">
-            <column name="email" length="100" not-null="true" unique="true" />
+            <column name="email" length="100" not-null="true" unique="true"/>
         </property>
 
     </class>

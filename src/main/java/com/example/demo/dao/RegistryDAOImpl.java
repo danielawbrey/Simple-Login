@@ -1,7 +1,7 @@
 package com.example.demo.dao;
 
-import com.example.demo.HibernateUtil;
-import com.example.demo.User;
+import com.example.demo.objects.HibernateUtil;
+import com.example.demo.objects.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -22,7 +22,7 @@ public class RegistryDAOImpl implements RegistryDAO {
             session.beginTransaction();
             User user = new User();
             user.setId(++id);
-            user.setUserName(username);
+            user.setUsername(username);
             user.setPassword(password);
             user.setFirstName(firstname);
             user.setLastName(lastname);
