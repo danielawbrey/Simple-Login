@@ -1,32 +1,24 @@
-package com.example.demo.objects;
+package com.example.demo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "INFO", catalog = "UserDB", uniqueConstraints = {
-        @UniqueConstraint(columnNames = "ID"),
-        @UniqueConstraint(columnNames = "USERNAME"),
-        @UniqueConstraint(columnNames = "EMAIL")
-})
+@Table(name = "user_info", catalog = "webapp")
 
 public class User {
-    @Column(name = "id", nullable = false, length = 100)
+    @Column(name = "id", nullable = false)
     private int id;
-    @Column(name = "username", nullable = false, length = 100)
+    @Column(name = "username", nullable = false)
     private String username;
-    @Column(name = "pass", nullable = false, length = 100)
+    @Column(name = "pass", nullable = false)
     private String password;
-    @Column(name = "firstname", nullable = false, length = 100)
+    @Column(name = "firstname", nullable = false)
     private String firstName;
-    @Column(name = "lastname", nullable = false, length = 100)
+    @Column(name = "lastname", nullable = false)
     private String lastName;
-    @Column(name = "email", nullable = false, length = 100)
+    @Column(name = "email", nullable = false)
     private String email;
 
     public int getId() { return this.id; }

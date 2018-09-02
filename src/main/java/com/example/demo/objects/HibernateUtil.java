@@ -14,13 +14,12 @@ public class HibernateUtil {
         try {
             // Create the SessionFactory from hibernate.cfg.xml
             Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
-            System.out.println("Hibernate Configuration loaded");
+            System.out.println("Hibernate configuration loaded");
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-            System.out.println("Hibernate serviceRegistry created");
+            System.out.println("Hibernate service registry created");
             SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-            if (sessionFactory != null) System.out.println("Hooray!");
+            if (sessionFactory != null) System.out.println("Hibernate session factory created");
             return sessionFactory;
-
         } catch(HibernateException exception){
             System.out.println("Problem creating session factory");
             exception.printStackTrace();

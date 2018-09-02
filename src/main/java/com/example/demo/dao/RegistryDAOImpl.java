@@ -1,7 +1,7 @@
 package com.example.demo.dao;
 
+import com.example.demo.User;
 import com.example.demo.objects.HibernateUtil;
-import com.example.demo.objects.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
